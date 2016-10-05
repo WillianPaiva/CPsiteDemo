@@ -1,0 +1,6 @@
+* Traçabilité
+
+| US# | #commit                                  |
+|-----+------------------------------------------|
+| US3 | [[https://github.com/WillianPaiva/CPsiteBazar/commit/60e9b96dc82149c602d4ae063d857c4eecc8db0f][60e9b96dc82149c602d4ae063d857c4eecc8db0f]] |
+|     |                                          |

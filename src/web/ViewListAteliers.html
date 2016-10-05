@@ -1,5 +1,4 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/CtrlListAteliers.php');
 echo '<!doctype html>
 <html lang="en">
     <head>
@@ -20,19 +19,19 @@ echo '<!doctype html>
             <div class="panel-heading">Ateliers</div>
 
             <!-- Table -->
-            <table class="table">';
+            <table class="table">'
+                require_once($_SERVER['DOCUMENT_ROOT'].'/CtrlListAteliers.php');
 
-$controler = new CtrlListAteliers('dbserver', 'acleret' , 'azerty' , 'acleret');
-$atribute=isset($_GET['row']) && file_exists($_GET['row'])
-         ? $_GET['row'] : 'date';
-$result = $controler->getListAteliers('ATELIER', $atribute);
-while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["titre"]."</td><td>".$row["theme"]."</td><td>"
-                   .$row["date"]."</td><td> <a type=\"button\" class=\"btn btn-default\" aria-label=\"Left Align\" href=\"ViewAtelier.php?id=".$row["id"]."\">EDIT</a> </td></tr>";
-}
+                $controler = new CtrlListAtelier('dbserve', 'acleret' , 'azerty' , 'acleret');
+                $atribute=isset($_GET['row']) && file_exists($_GET['row'])
+                ? $_GET['row'] : 'date';
+                $result = $controler->getListAteliers('ATELIERS', $atribute);
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>".$row["titre"]."</td><td>".$row["theme"]."</td><td>"
+                    .$row["date"]."</td></tr>";
+                }
 echo'     </table>
-                <a type="button" class="btn btn-default" aria-label="Left Align" href="ViewAtelier.php">NEW</a>
         </div>
     </body>
-</html>';
+</html>'
     ?>

@@ -1,0 +1,19 @@
+* KanBan
+
+|      | to do | on going | done  |
+|------+-------+----------+-------|
+| All  | T6    |          | T1    |
+| US#2 |       | T3       | T2    |
+| US#3 |       |          | T4,T5 |
+
+**** Liste des tâches
++ T1 : requête SQL pour créer la table Atelier
++ T2 : contrôleur de la page php qui représente l'ajout d'un atelier
++ T3 : vue de la page qui représente l'ajout d'un atelier
++ T4 : contrôleur de la page php qui représente la liste d'ateliers
++ T5 : vue de la page php qui représente la liste d'ateliers
++ T6 : réalisation des tests unitaires
+
+**** UserStories
++ US#2 : En tant que laboratoire, je souhaite ajouter un nouvel atelier, afin de permettre aux enseignants de s’y inscrire.
++ US#3 : En tant que laboratoire, je souhaite lister mes ateliers, afin de les modifier ou les supprimer.
