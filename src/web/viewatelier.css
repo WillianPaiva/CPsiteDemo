@@ -1,0 +1,17 @@
+body { background-color:#DDD; }
+[class*="col"] { margin-bottom: 20px; }
+img { width: 100%; }
+.title
+{
+    font-size: 20pt;
+}
+
+.well {
+  background-color:#CCC;
+  padding: 20px;
+  
+  margin:0 auto;
+  margin-top: 20px;
+}
+
+.error {color: #FF0000;}

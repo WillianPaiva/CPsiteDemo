@@ -21,17 +21,17 @@ class CtrlAtelier{
     }
 
 
-    function createAtelier($id, $titre, $theme, $date, $remarque, $lieu,
+    function updateAtelier($id, $titre, $theme, $date, $remarque, $lieu,
                            $duree, $resume, $capacite, $partenaires , $public_vise, $contenu, $table){
-        $sql = "UPDATE ".$table." SET titre=".$titre.",  theme=".$theme.", date=".$date.
-             ", remarque=".$remarque.", lieu=".$lieu.", duree=".$duree.", resume=".$resume.
-             ", capacite=".$capacite.", partenaires=".$partenaires.", public_vise=".$public_vise.
-             ",contenu=".$contenu." WHERE id=".$id;
+        $sql = "UPDATE ".$table." SET titre='".$titre."',  theme='".$theme."', date='".$date.
+             "', remarque='".$remarque."', lieu='".$lieu."', duree='".$duree."', resume='".$resume.
+             "', capacite='".$capacite."', partenaires='".$partenaires."', public_vise='".$public_vise.
+             "',contenu='".$contenu."' WHERE id= ".$id;
         $res=$this->conn->query($sql);
         return $res;
     }
 
-    function updateAtelier($titre, $theme, $date, $remarque, $lieu,
+    function createAtelier($titre, $theme, $date, $remarque, $lieu,
                            $duree, $resume, $capacite, $partenaires , $public_vise, $contenu, $table){
         $sql = "INSERT INTO ".$table." (titre, theme, date, remarque, lieu, duree, resume, capacite, partenaires, public_vise,contenu) ".
              " VALUES ('".$titre."', '".$theme."', '".$date."', '".$remarque.
@@ -53,7 +53,6 @@ class CtrlAtelier{
         $res=$this->conn->query($sql);
         return $res;
     }
-
 }
 
 ?>
